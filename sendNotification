@@ -16,4 +16,5 @@ if (d.weekday() == 0 and d.hour == 18 and d.minute >= 0 and d.minute <= 10):
 data = {"verification":verification,"dispatch":message}
 r = requests.post(url = url, data = data)
 
-Popen([sys.executable, '/home/pi/tl/emergency.py'])
+Popen([sys.executable, '/home/pi/tl/emergencyActivate'])
+
