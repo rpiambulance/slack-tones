@@ -1,0 +1,17 @@
+#!/usr/bin/python
+
+import requests
+import sys
+from auth import *
+from datetime import *
+
+d = datetime.now()
+
+message = "LONGTONE (GROUP ALERT) RECEIVED. Stand by for further information."
+
+if (d.weekday() == 5 and d.hour == 12 and d.minute >= 0 and d.minute <= 10):
+    message = "LONGTONE (GROUP ALERT) RECEIVED but likely to be the weekly all-call test. Confirm any possible message using other means."
+
+data = {"verification":verification,"dispatch":message}
+r = requests.post(url = url, data = data)
+
