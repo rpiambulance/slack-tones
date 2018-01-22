@@ -2,7 +2,7 @@
 
 import requests
 import sys
-from auth import *
+from auth_long import *
 from datetime import *
 
 d = datetime.now()
@@ -14,4 +14,3 @@ if (d.weekday() == 5 and d.hour == 12 and d.minute >= 0 and d.minute <= 10):
 
 data = {"verification":verification,"dispatch":message}
 r = requests.post(url = url, data = data)
-
