@@ -34,7 +34,7 @@ if __name__ == "__main__":
         if len(argv) < 2 or argv[1].lower() == 'normal':
             type_ = 'normal'
             message = "TONES RECEIVED. Stand by for text message dispatch."
-            if d.weekday() == 0 and d.hour == 18 and 0 <= d.minute <= 1:
+            if d.weekday() == 0 and d.hour == 18 and 0 <= d.minute <= 10:
                 message = "TONES RECEIVED but likely to be the weekly pager test. Confirm a possible" \
                           " call using other means."
         elif argv[1].lower() == 'long':
